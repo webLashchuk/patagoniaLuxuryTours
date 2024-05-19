@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Home"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "home"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "image": "home/hero.jpg",
+        "title":"Discover Patagonia: Where Adventure Awaits",
+        "subTitle":"Embark on unforgettable journeys led by seasoned experts."
+        }
+      </include>
+
+      <include src="./html/_featured.html">
+        {
+        "class":"hidden"
+        }
+      </include>
+
+      <include src="./html/home/_about.html"></include>
+
+      <include src="./html/home/_slider-home.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+  width: fit-content;
+  font-weight: var(--fw-600);
+  color: var(--color-dark-900);
+  text-transform: capitalize;
+}
+
+h1,
+h2 {
+  font-size: 64px;
+
+  @include media(mobile-l) {
+    font-size: 46px;
+  }
+
+  @include media(mobile-s) {
+    font-size: 34px;
+  }
+}
+
+h2 {
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--color-dark-500);
+  line-height: 1.5;
+  font-weight: var(--fw-400);
+}

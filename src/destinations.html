@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Destinations"}'></include>
+
+<body class="page__body">
+
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "destinations"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "image": "destinations/hero.jpg",
+        "title":"Discover Patagonian Wonders",
+        "subTitle":"Uncover the breathtaking beauty and diverse landscapes of Patagonia's captivating destinations."
+        }
+      </include>
+
+      <include src="./html/destinations/_overview.html"></include>
+
+      <include src="./html/destinations/_posts.html">
+        {
+        "title":"Beaches",
+        "imgFirst":"coastal-bliss.jpg",
+        "altFirst":"Coastal Bliss",
+        "titleFirst":"Coastal Bliss",
+        "textFirst":"Enjoy the tranquility of Patagonia's pristine coastline with our Coastal Bliss tour. Experience
+        secluded
+        beaches, turquoise waters, and golden sands, perfect for sunbathing, swimming, and water sports. Explore
+        charming coastal villages, savor delicious seafood delicacies, and immerse yourself in the relaxed coastal
+        atmosphere of Patagonia's beach paradise.",
+        "linkFirst":"tours.html",
+        "imgSecond":"coastal-retreat.jpg",
+        "altSecond":"Coastal Retreat",
+        "titleSecond":"Coastal Retreat",
+        "textSecond":"Escape to the tranquil shores of Patagonia's Coastal Retreat, featured in our Sun-Kissed Serenity
+        tour. Relax on secluded beaches framed by rugged cliffs, take refreshing dips in crystal-clear waters, and
+        unwind amidst the breathtaking natural beauty of the Patagonian coastline.",
+        "linkSecond":"tours.html"
+        }
+      </include>
+
+      <include src="./html/destinations/_posts.html">
+        {
+        "title":"Cities",
+        "imgFirst":"urban-splendor.jpg",
+        "altFirst":"Urban Splendor",
+        "titleFirst":"Urban Splendor",
+        "textFirst":"Immerse yourself in the vibrant energy of Patagonia's Urban Splendor, featured in our Patagonian
+        Cultural Odyssey tour. Explore charming cobblestone streets lined with colorful buildings, visit bustling
+        markets teeming with local artisans, and discover historic landmarks that reveal the city's rich cultural
+        heritage.",
+        "linkFirst":"tours.html",
+        "imgSecond":"cityscape-haven.jpg",
+        "altSecond":"Cityscape Haven",
+        "titleSecond":"Cityscape Haven",
+        "textSecond":"Explore the dynamic Cityscape Haven as part of our Patagonian Heritage Discovery tour. Wander
+        through charming streets adorned with historic architecture, immerse yourself in bustling markets filled with
+        local crafts, and indulge in the vibrant cultural scene of this urban gem nestled in the heart of Patagonia.",
+        "linkSecond":"tours.html"
+        }
+      </include>
+
+      <include src="./html/destinations/_posts.html">
+        {
+        "title":"Archaeological Sites",
+        "imgFirst":"ancient-ruins.jpg",
+        "altFirst":"Ancient Ruins",
+        "titleFirst":"Ancient Ruins",
+        "textFirst":"Explore the mysteries of Ancient Ruins on our Patagonian Cultural Odyssey tour. Uncover the
+        remnants of ancient civilizations, wander through crumbling structures steeped in history, and marvel at the
+        intricate craftsmanship and architectural wonders of Patagonia's archaeological heritage.",
+        "linkFirst":"tours.html",
+        "imgSecond":"lost-civilizations.jpg",
+        "altSecond":"Lost Civilizations",
+        "titleSecond":"Lost Civilizations",
+        "textSecond":"Delve into the mysteries of Lost Civilizations as part of our Patagonia Extreme Expedition tour.
+        Explore ancient ruins nestled amidst rugged landscapes, uncovering the secrets of bygone societies while
+        marveling at the profound historical significance of these archaeological wonders.",
+        "linkSecond":"tours.html"
+        }
+      </include>
+
+      <include src="./html/destinations/_slider-destinations.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+
+</body>
+
+</html>

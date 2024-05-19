@@ -1,0 +1,15 @@
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
+
+@mixin pseudo-vertical {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

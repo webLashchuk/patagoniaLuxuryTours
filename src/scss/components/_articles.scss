@@ -1,0 +1,15 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.articles {
+
+  h2 {
+    line-height: 1.2;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+}

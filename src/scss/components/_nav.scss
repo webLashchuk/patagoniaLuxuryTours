@@ -1,0 +1,93 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.nav {
+  @include flex-v-center;
+  position: relative;
+  color: inherit;
+
+  &__inner {
+    @include flex-all-sb;
+    width: 100%;
+
+    @include media(tablet) {
+
+      .logo--header {
+        display: none;
+      }
+    }
+
+    .header & {
+      @include media(tablet) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+        color: inherit;
+        padding-block: calc(var(--header-height) * 1.2) 20px;
+        width: 100%;
+        height: calc(var(--vh));
+        background-color: var(--color-white);
+        transform: translateX(150%);
+        transition-property: transform;
+        transition-duration: 0.4s;
+      }
+    }
+  }
+
+  &__list {
+    @include flex-v-center;
+    margin: 0 auto;
+
+    @include media(tablet) {
+      margin: 0 auto 20px;
+
+      &:not(.nav__list--footer) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 25px;
+
+      @include media(tablet) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: var(--fw-500);
+    color: var(--color-dark);
+    white-space: nowrap;
+    background-color: transparent;
+
+    @include media(tablet) {
+      padding: 10px 0;
+    }
+  }
+
+  .true {
+    border-bottom: 1px solid var(--color-dark);
+    font-weight: var(--fw-800);
+  }
+
+  &__btns {
+    @include flex-v-center;
+    justify-self: end;
+    gap: 10px;
+
+    @include media(mobile-m) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+
+      <a class="link logo logo--tablet" href="index.html">
+        <img class="logo__img" src="./images/logo.svg" alt="Peru LuxuryRetreats" width="245" height="30" loading="lazy">
+      </a>
+
+      <button class="burger" aria-label="Mobile menu" type="button"> <span></span> </button>
+
+      <div class="nav__inner">
+
+        <a class="logo logo--header" href="index.html">
+          <img class="logo__img" src="./images/logo.svg" alt="Peru LuxuryRetreats" width="350" height="45"
+            loading="lazy">
+        </a>
+
+        <ul class="nav__list">
+
+          <li class="nav__item">
+            <a href="index.html" class="link nav__link {{ page === 'home' }}">
+              Home
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="tours.html" class="link nav__link {{ page === 'tours' }}">
+              Tours
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="destinations.html" class="link nav__link {{ page === 'destinations' }}">
+              Destinations
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="guide.html" class="link nav__link {{ page === 'guide' }}">
+              Guide
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="nav__btns">
+
+          <a class="btn btn--user" href="sign-up.html">
+            Sign Up
+          </a>
+
+          <button class="btn btn--order" type="button" formsappId="664339b5544f758068cf14f0">
+            Book now
+          </button>
+
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<script>
+
+  const startHeightValue = () => {
+    let vh = window.innerHeight * 1;
+    document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
+
+    const pageHeader = document.querySelector('.header')
+
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+
+    document.documentElement.style.setProperty(
+      '--header-height',
+      `${headerHeight}px`
+    );
+  }
+
+  window.addEventListener('resize', startHeightValue);
+  window.addEventListener('scroll', startHeightValue);
+
+  startHeightValue();
+
+</script>

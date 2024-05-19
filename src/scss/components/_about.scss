@@ -1,0 +1,18 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.about {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  img {
+    aspect-ratio: 21/8;
+
+    @include media(tablet) {
+      aspect-ratio: 21/10;
+    }
+  }
+}

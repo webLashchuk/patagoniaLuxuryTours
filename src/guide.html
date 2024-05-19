@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Guide"}'></include>
+
+<body class="page__body">
+
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "guide"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "image": "guide/hero.jpg",
+        "title":"Discover Patagonia Guide",
+        "subTitle":"Your ultimate resource for planning the perfect Patagonian adventure."
+        }
+      </include>
+
+      <include src="./html/guide/_rules.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+
+</body>
+
+</html>

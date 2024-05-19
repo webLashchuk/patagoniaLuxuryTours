@@ -1,0 +1,60 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.product {
+  border: 1px solid var(--color-dark-600);
+  padding: 24px;
+
+  @include media(mobile-l) {
+    padding: 10px;
+  }
+
+  &__image {
+    margin-bottom: 15px;
+  }
+
+  img {
+    aspect-ratio: 72/25;
+
+    @include media(mobile-l) {
+      aspect-ratio: 16/9;
+    }
+  }
+
+  &__content {
+    @include flex-sb;
+    align-items: flex-end;
+
+    @include media(mobile-l) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__deskr {
+    max-width: 790px;
+    width: 100%;
+    margin-right: 30px;
+
+    @include media(mobile-l) {
+      margin-right: 0;
+    }
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 1.16;
+    margin-bottom: 10px;
+  }
+
+  &__order {
+    @include flex-v-center;
+    gap: 40px;
+  }
+
+  span {
+    font-size: 32px;
+    font-weight: var(--fw-600);
+  }
+}

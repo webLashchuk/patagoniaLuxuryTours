@@ -1,0 +1,94 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.slider {
+  padding-block: 5px;
+
+  h3 {
+    color: var(--color-dark-600);
+    font-size: 16px;
+  }
+
+  h3,
+  p {
+    display: inline;
+  }
+
+  .article__image {
+    position: relative;
+
+    img {
+      aspect-ratio: 117/99;
+
+      @include media(mobile-l) {
+        aspect-ratio: 16/10;
+      }
+    }
+
+  }
+
+  .slide-pagination {
+    position: absolute;
+    display: flex;
+    gap: 16px;
+    left: 50%;
+    max-width: fit-content;
+    transform: translateX(-50%);
+    background-color: var(--color-white);
+    bottom: 25px;
+    padding: 8px 16px;
+    line-height: 1;
+  }
+
+  .swiper-pagination-bullet {
+    height: 8px;
+    width: 8px;
+    margin: 0;
+    background-color: var(--color-dark-900);
+  }
+
+  .slide-pagination .swiper-pagination-bullet {
+    margin: 0;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: calc(var(--radius-main) * 8 - 4px);
+    background-color: var(--color-white);
+    top: 50%;
+
+    @include media(tablet) {
+      display: none;
+    }
+
+    &::before {
+      @include pseudo;
+      width: 20px;
+      height: 20px;
+      filter: var(--dark-900);
+      @include contain-background;
+      background-image: var(--arrow);
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%) rotate(180deg)
+    }
+  }
+
+  .swiper-button-next {
+    right: 25px;
+  }
+
+  .swiper-button-prev {
+    left: 25px;
+
+    &::before {
+      content: "";
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+}

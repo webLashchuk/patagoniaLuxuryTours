@@ -1,0 +1,91 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.info {
+  position: relative;
+  @include flex-col;
+  height: 100%;
+  border: 1px solid var(--color-dark-600);
+  padding: 130px 25px 35px;
+
+  @include media(mobile-s) {
+    padding: 120px 15px 25px;
+  }
+
+  &::before,
+  &::after {
+    @include pseudo;
+    @include contain-background;
+  }
+
+  &::before {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-gray-100);
+    border-radius: calc(var(--radius-main)*4);
+    top: 24px;
+    left: 24px;
+
+    @include media(mobile-s) {
+      top: 15px;
+      left: 15px;
+    }
+  }
+
+  &::after {
+    width: 48px;
+    height: 48px;
+    filter: var(--dark-700);
+    top: 40px;
+    left: 40px;
+
+    @include media(mobile-s) {
+      top: 31px;
+      left: 31px;
+    }
+  }
+
+  &--itinerary {
+    &::after {
+      background-image: var(--puzzle);
+    }
+  }
+
+  &--inclusions {
+    &::after {
+      background-image: var(--check);
+    }
+  }
+
+  &--redefined {
+    &::after {
+      background-image: var(--heart);
+    }
+  }
+
+  &--sustainable {
+    &::after {
+      background-image: var(--bulb);
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    letter-spacing: 0.06rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  &--home {
+    padding: 130px 25px 25px;
+
+    @include media(mobile-s) {
+      padding: 120px 15px 25px;
+    }
+
+
+    h3 {
+      line-height: 1;
+    }
+  }
+}
